@@ -1,0 +1,45 @@
+.floating-menu {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+
+  &__container {
+    @extend %container;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 14px 0;
+  }
+
+  &__logo-link {
+    display: flex;
+    align-items: center;
+  }
+
+  &__site-title {
+    padding-left: 12px;
+    font-size: 29px;
+    text-transform: lowercase;
+    color: $fontHighlightColor;
+    font-weight: 100;
+  }
+
+  &__menu-list {
+    padding-top: 4px;
+    width: 526px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__menu-link {
+    display: block;
+    padding: 5px 0;
+    font-size: 13px;
+    font-weight: 900;
+    text-transform: uppercase;
+
+    &:hover {
+      color: $fontHighlightColor;
+    }
+  }
+}

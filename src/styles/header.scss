@@ -1,0 +1,62 @@
+.header {
+  color: $fontSecondaryColor;
+  background-image: url(../images/header_bg.jpg);
+  background-size: cover;
+  margin-top: -78px;
+  padding-top: 78px;
+
+  &__container {
+    @extend %container;
+  }
+
+  &__content {
+    padding-top: 140px;
+    text-align: center;
+  }
+
+  &__main-title {
+    position: relative;
+    font-family: $secondaryPageFont;
+    text-align: center;
+    font-size: 33px;
+    padding-bottom: 19px;
+
+    &::after {
+      @extend %underscore;
+      background-color: $fontHighlightColor;
+    }
+  }
+
+  &__description {
+    max-width: 781px;
+    margin: 0 auto;
+    padding: 27px 0 47px;
+    text-align: center;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 23px;
+  }
+
+  &__button {
+    @extend %button;
+  }
+
+  &__links-container {
+    padding: 121px 0 67px;
+    text-align: center;
+  }
+
+  &__slider-link {
+    display: inline-block;
+    margin: 0 1px;
+    width: $sliderDotsSize;
+    height: $sliderDotsSize;
+    border: 1px solid $fontSecondaryColor;
+    border-radius: 50%;
+
+    &--checked {
+      background-color: $fontHighlightColor;
+    }
+  }
+  
+}

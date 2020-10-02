@@ -1,0 +1,57 @@
+.ourworks {
+  padding: 61px 15px 69px;
+  text-align: center;
+  scroll-margin-top: $scrollMarginTop;
+
+  &__container {
+    @extend %container;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__title {
+    font-family: $secondaryPageFont;
+    font-weight: 600;
+    text-transform: uppercase;
+  }
+
+  &__link {
+    position: relative;
+    padding-right: 19px;
+    font-size: 15px;
+    color: #413d4b;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 4px;
+      right: 4px;
+      width: 9px;
+      height: 9px;
+      border-top: 1px solid #413d4b;
+      border-right: 1px solid #413d4b;
+      transform: rotate(45deg);
+    }
+  }
+
+  &__gallery-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 267px);
+    justify-content: center;
+    padding: 64px 0 70px;
+    font-size: 0;
+  }
+
+  &__image-container {
+    display: block;
+    border: 1px solid #eee;
+  }
+
+  &__button {
+    @extend %button;
+    padding-left: 26px;
+    padding-right: 26px;
+  }
+  
+}
