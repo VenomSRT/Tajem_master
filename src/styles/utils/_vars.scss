@@ -1,1 +1,17 @@
-$c-gray: #eee;
+$primaryPageFont: "Roboto", sans-serif;
+$secondaryPageFont: "Playfair", serif;
+$backgroundColor: #fff;
+$fontRegularColor: #413d4b;
+$fontHighlightColor: #00e0d0;
+$fontSecondaryColor: #fff;
+$gradientShadow:
+  linear-gradient(
+    90deg,
+    rgba(46,42,78,0.9) 0%,
+    rgba(80,63,118,0.9) 100%
+  );
+$sliderDotsSize: 10px;
+$font-size: 24px;
+$buttonContainerWidth: 200px;
+$scrollMarginTop: 78px;
+$benefitsBorder: 1px solid #ebebeb;

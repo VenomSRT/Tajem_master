@@ -1,7 +1,76 @@
 @import "utils";
 @import "fonts";
-@import "typography";
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
 
 body {
-  background: $c-gray;
+  margin: 0;
+  background: $backgroundColor;
+  font-family: $primaryPageFont;
 }
+
+h1 {
+  margin: 0;
+}
+
+h2 {
+  margin: 0;
+}
+
+h3 {
+  margin: 0;
+}
+
+h5 {
+  margin: 0;
+}
+
+h6 {
+  margin: 0;
+}
+
+p {
+  margin: 0;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: $fontSecondaryColor;
+}
+
+#menu-toggle {
+  display: none;
+
+  &:checked ~ .floating-menu {
+    visibility: visible;
+  }
+}
+
+.wrapper {
+  background: $gradientShadow;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+@import "floating-menu";
+@import "header";
+@import "ourstory";
+@import "videoblock";
+@import "expertise";
+@import "contact";
+@import "footer";
+@import "ourteam";
+@import "ourwork";
+@import "testimonials";

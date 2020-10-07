@@ -1,0 +1,93 @@
+.contact {
+  padding-left: 15px;
+  padding-right: 15px;
+
+  &__container {
+    @extend %container;
+    padding: 78px 0 66px;
+    display: grid;
+    grid-template-columns: 1fr 381px;
+    column-gap: 15px;
+    justify-content: space-between;
+    font-family: "Playfair", serif;
+    font-size: 15px;
+    text-transform: uppercase;
+    scroll-margin-top: $scrollMarginTop;
+
+    @media (max-width: 745px) {
+      display: flex;
+      flex-wrap: wrap;
+      justify-items: center;
+      justify-content: center;
+    }
+  }
+
+  &__form {
+    display: grid;
+    grid-template-columns: 1fr;
+    row-gap: 23px;
+    flex-basis: 695px;
+    max-width: 460px;
+    min-width: 300px;
+
+    @media (max-width: 745px) {
+      justify-items: center;
+      padding-bottom: 60px;
+    }
+  }
+
+  &__form-title {
+    padding-bottom: 7px;
+  }
+
+  &__field {
+    width: 100%;
+    padding: 12px 19px;
+    border: 1px solid #e5e5e5;
+    font-family: $primaryPageFont;
+    font-size: 16px;
+    outline: none;
+
+    &--texarea {
+      resize: none;
+      height: 199px;
+      padding-top: 12px;
+      padding-left: 20px;
+      font-size: 15px;
+    }
+  }
+
+  &__button {
+    @extend %button;
+    width: 120px;
+    background-color: transparent;
+    font-size: 16px;
+  }
+
+  &__clients-title {
+    padding-bottom: 42px;
+
+    @media (max-width: 745px) {
+      text-align: center;
+    }
+  }
+
+  &__clients-container {
+    display: grid;
+    grid-template-columns: repeat(2, 166px);
+    row-gap: 47px;
+    justify-content: space-between;
+    align-items: center;
+    justify-items: center;
+
+    @media (max-width: 745px) {
+      column-gap: 40px;
+    }
+  }
+
+  &__client-logo {
+    &--billabong {
+      margin-top: -33px;
+    }
+  }
+}

@@ -1,0 +1,82 @@
+.ourteam {
+  position: relative;
+  background-image: url(../images/ourteam_bg.jpg);
+  background-size: cover;
+  color: $fontSecondaryColor;
+  text-align: center;
+  scroll-margin-top: $scrollMarginTop;
+
+  &__container {
+    @extend %container;
+    padding-top: 62px;
+    padding-bottom: 69px;
+  }
+
+  &__title {
+    font-family: $secondaryPageFont;
+    text-transform: uppercase;
+    font-weight: 600;
+  }
+
+  &__description {
+    position: relative;
+    padding-top: 5px;
+    padding-bottom: 18px;
+    font-family: $secondaryPageFont;
+    font-weight: 400;
+    font-size: 16px;
+
+    &:after {
+      @extend %underscore;
+      background-color: $backgroundColor;
+    }
+  }
+
+  &__cards-container {
+    display: grid;
+    grid-template-columns: repeat(4, 220px);
+    justify-content: space-between;
+    padding-top: 48px;
+
+    @media (max-width: 960px) {
+      grid-template-columns: repeat(2, 220px);
+      row-gap: 30px;
+      column-gap: 40px;
+      justify-content: center;
+      justify-items: center;
+    }
+
+    @media (max-width: 570px) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__card {
+    width: 220px;
+    padding-bottom: 23px;
+    border: 1px solid #fff;
+    text-transform: uppercase;
+
+  }
+
+  &__member-name {
+    padding-top: 11px;
+    font-size: 15px;
+  }
+
+  &__member-position {
+    padding-top: 6px;
+    font-size: 13px;
+  }
+
+  &__random-text {
+    padding-top: 66px;
+    padding-bottom: 25px;
+    font-weight: 300;
+  }
+
+  &__button {
+    @extend %button;
+  }
+
+}

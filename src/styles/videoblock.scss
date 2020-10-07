@@ -1,0 +1,54 @@
+.videoblock {
+  position: relative;
+
+  &__container {
+    width: 100%;
+  }
+
+  &__poster {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(../images/poster_bg.jpg);
+    background-size: cover;
+  }
+
+  &__overlay {
+    position: absolute;
+    top: 0;
+    background: $gradientShadow;
+    width: 100%;
+    height: 100%;
+  }
+
+  &__button-container {
+    position: absolute;
+    top: calc(50% - 100px / 2);
+    left: calc(50% - #{$buttonContainerWidth} / 2);
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+    justify-items: center;
+    width: $buttonContainerWidth;
+  }
+
+  &__button {
+    width: 100px;
+    height: 100px;
+    background: url(../images/play_icon.png) no-repeat;
+    transition: transform 0.5s;
+    cursor: pointer;
+
+    &:hover {
+      transform: scale(1.2);
+    }
+  }
+
+  &__description {
+    padding-top: 32px;
+    font-family: $primaryPageFont;
+    font-weight: 700;
+    color: $fontSecondaryColor;
+    text-transform: uppercase;
+  }
+}

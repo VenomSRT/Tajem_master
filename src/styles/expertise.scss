@@ -1,0 +1,131 @@
+.expertise {
+  padding-top: 61px;
+  padding-bottom: 64px;
+  text-align: center;
+  scroll-margin-top: $scrollMarginTop;
+
+  &__container {
+    @extend %container;
+  }
+
+  &__title {
+    padding-bottom: 5px;
+    font-size: 23px;
+    font-family: $secondaryPageFont;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+
+  &__description {
+    position: relative;
+    font-size: 16px;
+    padding-bottom: 18px;
+    font-family: $secondaryPageFont;
+
+    &:after {
+      @extend %underscore;
+      background-color: #c6c4c9;
+    }
+  }
+
+  &__benefits-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    padding-top: 41px;
+
+    @media (max-width: 767px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media (max-width: 570px) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__benefit {
+    display: grid;
+    grid-template-rows: 82px 33px 57px;
+    justify-items: center;
+    border: $benefitsBorder;
+    padding: 39px 13px 44px;
+
+    &:nth-child(1),
+    &:nth-child(4) {
+      border-left: none;
+    }
+
+    &:nth-child(3),
+    &:nth-child(6) {
+      border-right: none;
+    }
+
+    &:nth-child(1),
+    &:nth-child(2),
+    &:nth-child(3) {
+      border-top: none;
+    }
+
+    &:nth-child(4),
+    &:nth-child(5),
+    &:nth-child(6) {
+      border-bottom: none;
+    }
+
+    @media (max-width: 767px) {
+      grid-template-rows: 82px 33px 1fr;
+      padding: 39px 30px 44px;
+      border-bottom: $benefitsBorder;
+      border-top: $benefitsBorder;
+
+      &:nth-child(odd) {
+        border: $benefitsBorder;
+        border-left: none;
+      }
+
+      &:nth-child(even) {
+        border: $benefitsBorder;
+        border-right: none;
+      }
+
+      &:nth-child(1),
+      &:nth-child(2) {
+        border-top: none;
+      }
+
+      &:nth-child(5),
+      &:nth-child(6) {
+        border-bottom: none;
+      }
+    }
+
+    @media (max-width: 570px) {
+      &:first-child {
+        border-right: none;
+      }
+
+      &:last-child {
+        border-left: none;
+      }
+
+      &:not(:first-child),
+      &:not(:last-child) {
+        border-top: $benefitsBorder;
+        border-bottom: $benefitsBorder;
+        border-left: none;
+        border-right: none;
+      }
+    }
+
+  }
+
+  &__benefit-title {
+    font-weight: 900;
+    font-size: 15px;
+    text-transform: uppercase;
+  }
+
+  &__benefit-info {
+    line-height: 21px;
+  }
+}
