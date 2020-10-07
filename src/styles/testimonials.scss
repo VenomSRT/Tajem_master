@@ -21,6 +21,10 @@
   &__article {
     padding: 0 85px;
     line-height: 26px;
+
+    @media (max-width: 767px) {
+      padding: 0 35px;
+    }
   }
 
   &__paragraph {

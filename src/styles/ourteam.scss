@@ -45,6 +45,10 @@
       justify-content: center;
       justify-items: center;
     }
+
+    @media (max-width: 570px) {
+      grid-template-columns: 1fr;
+    }
   }
 
   &__card {
@@ -74,5 +78,5 @@
   &__button {
     @extend %button;
   }
-  
+
 }

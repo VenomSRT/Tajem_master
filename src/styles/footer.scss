@@ -12,7 +12,12 @@
   &__container-top {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    column-gap: 18px;
+    column-gap: 19px;
+
+    @media (max-width: 767px) {
+      grid-template-columns: 1fr;
+      row-gap: 40px;
+    }
   }
 
   &__block {
@@ -27,7 +32,7 @@
   }
 
   &__site-title {
-    padding-left: 12px;
+    padding-left: 11px;
     color: $fontHighlightColor;
     text-transform: lowercase;
     font-weight: 100;
@@ -89,10 +94,11 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     column-gap: 11px;
-    padding-top: 35px;
+    padding-top: 34px;
   }
 
   &__input {
+    height: 45px;
     padding: 13px 3px 13px 14px;
     font-size: 15px;
     background-color: transparent;
@@ -107,10 +113,13 @@
   }
 
   &__submit {
-    padding: 10px 22px;
+    height: 45px;
+    width: 69px;
+    padding-top: 4px;
     background-color: rgba($color: #fff, $alpha: 0.3);
     outline: none;
     transition: background-color 0.5s;
+    border: none;
 
     &:hover {
       background-color: rgba($color: #fff, $alpha: 0.7);
@@ -120,7 +129,7 @@
   &__soc {
     display: flex;
     justify-content: space-between;
-    width: 250px;
+    width: 252px;
     padding-top: 27px;
   }
 
@@ -143,12 +152,20 @@
     display: grid;
     grid-template-columns: 2fr 1fr;
     padding-top: 65px;
+
+    @media (max-width: 730px) {
+      grid-template-columns: 1fr;
+    }
   }
 
   &__sub-menu {
     display: flex;
-    width: 302px;
+    width: 303px;
     justify-content: space-between;
+
+    @media (max-width: 730px) {
+      justify-self: center;
+    }
   }
 
   &__link {
@@ -164,6 +181,11 @@
   &__copyright {
     justify-self: end;
     font-size: 15px;
+
+    @media (max-width: 730px) {
+      padding-top: 60px;
+      justify-self: center;
+    }
   }
 
 }

@@ -14,11 +14,19 @@
     height: 233px;
     flex-grow: 1;
     text-align: center;
+
+    @media (max-width: 629px) {
+      display: none;
+    }
   }
 
   &__content {
     max-width: 571px;
     padding-left: 15px;
+
+    @media (max-width: 629px) {
+      text-align: center;
+    }
   }
 
   &__title {
@@ -34,9 +42,14 @@
     font-size: 16px;
     line-height: 22px;
     padding-bottom: 27px;
+    text-align: left;
   }
 
   &__button {
     @extend %button;
+
+    @media (max-width: 629px) {
+      text-align: center;
+    }
   }
 }

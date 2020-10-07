@@ -1,23 +1,39 @@
 .contact {
+  padding-left: 15px;
+  padding-right: 15px;
+
   &__container {
     @extend %container;
-    padding: 78px 15px 65px;
+    padding: 78px 0 66px;
     display: grid;
-    grid-template-columns: 1fr 400px;
+    grid-template-columns: 1fr 381px;
     column-gap: 15px;
     justify-content: space-between;
-
     font-family: "Playfair", serif;
     font-size: 15px;
     text-transform: uppercase;
     scroll-margin-top: $scrollMarginTop;
+
+    @media (max-width: 745px) {
+      display: flex;
+      flex-wrap: wrap;
+      justify-items: center;
+      justify-content: center;
+    }
   }
 
   &__form {
     display: grid;
+    grid-template-columns: 1fr;
     row-gap: 23px;
+    flex-basis: 695px;
     max-width: 460px;
     min-width: 300px;
+
+    @media (max-width: 745px) {
+      justify-items: center;
+      padding-bottom: 60px;
+    }
   }
 
   &__form-title {
@@ -50,6 +66,10 @@
 
   &__clients-title {
     padding-bottom: 42px;
+
+    @media (max-width: 745px) {
+      text-align: center;
+    }
   }
 
   &__clients-container {
@@ -59,6 +79,10 @@
     justify-content: space-between;
     align-items: center;
     justify-items: center;
+
+    @media (max-width: 745px) {
+      column-gap: 40px;
+    }
   }
 
   &__client-logo {

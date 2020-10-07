@@ -3,6 +3,10 @@
   top: 0;
   z-index: 1;
 
+  @media (max-width: 629px) {
+    visibility: hidden;
+  }
+
   &__container {
     @extend %container;
     display: flex;
@@ -14,6 +18,10 @@
   &__logo-link {
     display: flex;
     align-items: center;
+
+    @media (max-width: 767px) {
+      display: none;
+    }
   }
 
   &__site-title {
@@ -24,11 +32,27 @@
     font-weight: 100;
   }
 
+  &__navbar {
+    @media (max-width: 767px) {
+      margin: auto;
+    }
+
+    @media (max-width: 629px) {
+      width: 100%;
+    }
+  }
+
   &__menu-list {
     padding-top: 4px;
     width: 526px;
     display: flex;
     justify-content: space-between;
+
+    @media (max-width: 629px) {
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+    }
   }
 
   &__menu-link {

@@ -50,6 +50,14 @@ a {
   color: $fontSecondaryColor;
 }
 
+#menu-toggle {
+  display: none;
+
+  &:checked ~ .floating-menu {
+    visibility: visible;
+  }
+}
+
 .wrapper {
   background: $gradientShadow;
   padding-left: 15px;
